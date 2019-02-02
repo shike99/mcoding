@@ -124,6 +124,7 @@ body {
 .work-box {
   position: relative;
   display: table-cell;
+  overflow: hidden;
 }
 
 .work-box::after {
@@ -168,6 +169,19 @@ body {
   display: block;
   width: 100%;
   margin: 0 0 60%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.work-box:nth-of-type(odd) .work-image {
+  transform-origin: top center;
+}
+
+.work-box:nth-of-type(even) .work-image {
+  transform-origin: bottom center;
+}
+
+.work-box:hover .work-image {
+  transform: scale(1.1);
 }
 
 .work-description {
